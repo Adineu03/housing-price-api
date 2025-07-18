@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: housing-price-api
+spec:
+  selector:
+    app: housing-price-api
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
